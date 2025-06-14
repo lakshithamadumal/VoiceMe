@@ -9,6 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Meta Tag-->
     <meta
       name="description"
@@ -103,6 +105,52 @@
 
       .nav-links a:hover {
         color: var(--medium-blue);
+      }
+
+      /* Mobile Menu Button */
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--dark-grayish-blue);
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        padding: 20px;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .mobile-menu ul {
+        list-style: none;
+      }
+
+      .mobile-menu ul li {
+        margin-bottom: 15px;
+      }
+
+      .mobile-menu ul li a {
+        text-decoration: none;
+        color: var(--dark-grayish-blue);
+        font-weight: 500;
+        font-size: 18px;
       }
 
       /* Hero Section */
@@ -363,6 +411,7 @@
         border-radius: 2px;
         position: relative;
         overflow: hidden;
+        cursor: pointer;
       }
 
       .progress {
@@ -397,62 +446,6 @@
       }
 
       .select-button:hover {
-        background-color: var(--dark-blue);
-      }
-
-      /* Contact Section */
-      .contact-form {
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: white;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-      }
-
-      .form-group input,
-      .form-group textarea {
-        width: 100%;
-        padding: 12px 15px;
-        border: 1px solid var(--very-light-blue);
-        border-radius: 5px;
-        background-color: var(--very-light-blue);
-        transition: border-color 0.3s;
-      }
-
-      .form-group input:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: var(--medium-blue);
-      }
-
-      .form-group textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-
-      .submit-button {
-        background-color: var(--medium-blue);
-        color: white;
-        border: none;
-        padding: 12px 30px;
-        border-radius: 5px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .submit-button:hover {
         background-color: var(--dark-blue);
       }
 
@@ -521,6 +514,22 @@
           display: none;
         }
 
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .logo {
+          font-size: 20px;
+        }
+
+        .logo .long-name {
+          display: none;
+        }
+
+        .logo .short-name {
+          display: inline;
+        }
+
         .hero h1 {
           font-size: 36px;
         }
@@ -533,6 +542,12 @@
           grid-template-columns: 1fr;
         }
       }
+
+      @media (min-width: 769px) {
+        .logo .short-name {
+          display: none;
+        }
+      }
     </style>
   </head>
 
@@ -541,7 +556,10 @@
     <header>
       <div class="container">
         <nav>
-          <a href="#" class="logo">BizTone Solutions</a>
+          <a href="#" class="logo">
+            <span class="long-name">BizTone Solutions</span>
+            <span class="short-name">BizTone</span>
+          </a>
           <ul class="nav-links">
             <li>
               <a href="#home">Home</a>
@@ -553,9 +571,28 @@
               <a href="#audio">Voice Samples</a>
             </li>
           </ul>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
         </nav>
       </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#audio">Voice Samples</a>
+        </li>
+      </ul>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
@@ -694,7 +731,7 @@
 
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio1">▶</button>
-                <div class="progress-bar">
+                <div class="progress-bar" data-audio="audio1">
                   <div class="progress" id="progress1"></div>
                 </div>
                 <span class="time" id="time1">0:00</span>
@@ -782,7 +819,7 @@
 
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio2">▶</button>
-                <div class="progress-bar">
+                <div class="progress-bar" data-audio="audio2">
                   <div class="progress" id="progress2"></div>
                 </div>
                 <span class="time" id="time2">0:00</span>
@@ -870,7 +907,7 @@
 
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio3">▶</button>
-                <div class="progress-bar">
+                <div class="progress-bar" data-audio="audio3">
                   <div class="progress" id="progress3"></div>
                 </div>
                 <span class="time" id="time3">0:00</span>
@@ -958,7 +995,7 @@
 
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio4">▶</button>
-                <div class="progress-bar">
+                <div class="progress-bar" data-audio="audio4">
                   <div class="progress" id="progress4"></div>
                 </div>
                 <span class="time" id="time4">0:00</span>
@@ -1034,6 +1071,34 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          // Toggle between bars and times icon
+          const icon = this.querySelector('i');
+          if (mobileMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+          } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+          });
+        });
+
         // Audio Player Functionality
         const playButtons = document.querySelectorAll(".play-button");
         let currentlyPlaying = null;
@@ -1041,14 +1106,13 @@
         playButtons.forEach((button) => {
           const audioId = button.getAttribute("data-audio");
           const audio = document.getElementById(audioId);
-          const progressBar = document.getElementById(
-            `progress${audioId.slice(-1)}`
-          );
-          const timeDisplay = document.getElementById(
-            `time${audioId.slice(-1)}`
-          );
+          const progressBar = document.querySelector(`.progress-bar[data-audio="${audioId}"]`);
+          const progress = document.getElementById(`progress${audioId.slice(-1)}`);
+          const timeDisplay = document.getElementById(`time${audioId.slice(-1)}`);
 
-          button.addEventListener("click", function () {
+          button.addEventListener("click", function (e) {
+            e.stopPropagation(); // Prevent triggering progress bar click
+            
             // If this audio is already playing, pause it
             if (audio === currentlyPlaying && !audio.paused) {
               audio.pause();
@@ -1071,9 +1135,26 @@
             button.innerHTML = "❚❚";
           });
 
+          // Progress bar click functionality
+          progressBar.addEventListener('click', function(e) {
+            if (!audio.duration) return;
+            
+            const rect = this.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            audio.currentTime = pos * audio.duration;
+            
+            // If audio was paused, play it
+            if (audio.paused) {
+              audio.play();
+              currentlyPlaying = audio;
+              const button = document.querySelector(`.play-button[data-audio="${audioId}"]`);
+              if (button) button.innerHTML = "❚❚";
+            }
+          });
+
           audio.addEventListener("timeupdate", function () {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = `${progress}%`;
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = `${progressPercent}%`;
 
             // Update time display
             const minutes = Math.floor(audio.currentTime / 60);
@@ -1084,8 +1165,9 @@
           });
 
           audio.addEventListener("ended", function () {
-            button.innerHTML = "▶";
-            progressBar.style.width = "0%";
+            const button = document.querySelector(`.play-button[data-audio="${audioId}"]`);
+            if (button) button.innerHTML = "▶";
+            progress.style.width = "0%";
             timeDisplay.textContent = "0:00";
           });
         });

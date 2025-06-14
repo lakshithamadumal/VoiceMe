@@ -10,7 +10,10 @@
       rel="stylesheet"
     />
     <!-- Font Awesome for hamburger icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Meta Tag-->
     <meta
       name="description"
@@ -115,20 +118,21 @@
         color: var(--dark-grayish-blue);
         font-size: 24px;
         cursor: pointer;
+        padding: 5px;
       }
 
       /* Mobile Menu */
       .mobile-menu {
         display: none;
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: 0;
         right: 0;
         background-color: white;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
         padding: 20px;
-        transform: translateY(-100%);
+        transform: translateY(-150%);
         opacity: 0;
         transition: all 0.3s ease;
       }
@@ -151,6 +155,15 @@
         color: var(--dark-grayish-blue);
         font-weight: 500;
         font-size: 18px;
+        display: block;
+        padding: 10px;
+        transition: all 0.3s;
+      }
+
+      .mobile-menu ul li a:hover {
+        color: var(--medium-blue);
+        background-color: var(--very-light-blue);
+        border-radius: 5px;
       }
 
       /* Hero Section */
@@ -518,6 +531,10 @@
           display: block;
         }
 
+        .mobile-menu {
+          display: block;
+        }
+
         .logo {
           font-size: 20px;
         }
@@ -558,20 +575,14 @@
         <nav>
           <a href="#" class="logo">
             <span class="long-name">BizTone Solutions</span>
-            <span class="short-name">BizTone Solutions</span>
+            <span class="short-name">BizTone</span>
           </a>
           <ul class="nav-links">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#audio">Voice Samples</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#audio">Voice Samples</a></li>
           </ul>
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -579,20 +590,13 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
+    <div class="mobile-menu" id="mobileMenu">
       <ul>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#audio">Voice Samples</a>
-        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#audio">Voice Samples</a></li>
       </ul>
     </div>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
@@ -1007,15 +1011,18 @@
           </div>
           <!-- Add more audio cards as needed -->
         </div>
-        
-          <p style="
+
+        <p
+          style="
             text-align: center;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             margin-top: 40px;
-          ">Additional charges apply for additional time and words.</p>
-        
+          "
+        >
+          Additional charges apply for additional time and words.
+        </p>
       </div>
     </section>
     <!-- Footer -->
@@ -1072,30 +1079,30 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-          mobileMenu.classList.toggle('active');
+        const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        mobileMenuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("active");
           // Toggle between bars and times icon
-          const icon = this.querySelector('i');
-          if (mobileMenu.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+          const icon = this.querySelector("i");
+          if (mobileMenu.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
           } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
           }
         });
 
         // Close mobile menu when clicking on a link
-        const mobileLinks = document.querySelectorAll('.mobile-menu a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        const mobileLinks = document.querySelectorAll(".mobile-menu a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.remove("active");
+            const icon = mobileMenuBtn.querySelector("i");
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
           });
         });
 
@@ -1106,13 +1113,19 @@
         playButtons.forEach((button) => {
           const audioId = button.getAttribute("data-audio");
           const audio = document.getElementById(audioId);
-          const progressBar = document.querySelector(`.progress-bar[data-audio="${audioId}"]`);
-          const progress = document.getElementById(`progress${audioId.slice(-1)}`);
-          const timeDisplay = document.getElementById(`time${audioId.slice(-1)}`);
+          const progressBar = document.querySelector(
+            `.progress-bar[data-audio="${audioId}"]`
+          );
+          const progress = document.getElementById(
+            `progress${audioId.slice(-1)}`
+          );
+          const timeDisplay = document.getElementById(
+            `time${audioId.slice(-1)}`
+          );
 
           button.addEventListener("click", function (e) {
             e.stopPropagation(); // Prevent triggering progress bar click
-            
+
             // If this audio is already playing, pause it
             if (audio === currentlyPlaying && !audio.paused) {
               audio.pause();
@@ -1136,18 +1149,20 @@
           });
 
           // Progress bar click functionality
-          progressBar.addEventListener('click', function(e) {
+          progressBar.addEventListener("click", function (e) {
             if (!audio.duration) return;
-            
+
             const rect = this.getBoundingClientRect();
             const pos = (e.clientX - rect.left) / rect.width;
             audio.currentTime = pos * audio.duration;
-            
+
             // If audio was paused, play it
             if (audio.paused) {
               audio.play();
               currentlyPlaying = audio;
-              const button = document.querySelector(`.play-button[data-audio="${audioId}"]`);
+              const button = document.querySelector(
+                `.play-button[data-audio="${audioId}"]`
+              );
               if (button) button.innerHTML = "❚❚";
             }
           });
@@ -1165,7 +1180,9 @@
           });
 
           audio.addEventListener("ended", function () {
-            const button = document.querySelector(`.play-button[data-audio="${audioId}"]`);
+            const button = document.querySelector(
+              `.play-button[data-audio="${audioId}"]`
+            );
             if (button) button.innerHTML = "▶";
             progress.style.width = "0%";
             timeDisplay.textContent = "0:00";

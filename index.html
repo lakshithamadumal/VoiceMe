@@ -1,798 +1,865 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizTone Solutions - Professional Voice Overs for Ads</title>
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Meta Tag-->
+    <meta
+      name="description"
+      content="BizTone Solutions offers professional voice overs for ads and commercials. Choose from a wide range of voice samples and find the perfect voice for your brand."
+    />
+    <meta
+      name="keywords"
+      content="voice over, professional voice actors, ad voice, commercial voice overs, voice recording, audio production, Sri Lanka voice overs, ad agency voice talent"
+    />
+    <meta name="author" content="BizTone Solutions" />
+    <meta
+      property="og:title"
+      content="BizTone Solutions - Professional Voice Overs for Ads"
+    />
+    <meta
+      property="og:description"
+      content="High-quality voice over services for advertisements. Browse voice samples and select the best voice for your business."
+    />
+    <style>
+      :root {
+        --light-blue: #c6dbf7;
+        --medium-blue: #4474e0;
+        --very-light-blue: #eff4fb;
+        --dark-blue: #3a5c9e;
+        --almost-white: #f1f6fd;
+        --dark-grayish-blue: #2e3c4c;
+      }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BizTone Solutions - Professional Voice Overs for Ads</title>
-        <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet">
-        <!-- Meta Tag-->
-        <meta name="description"
-            content="BizTone Solutions offers professional voice overs for ads and commercials. Choose from a wide range of voice samples and find the perfect voice for your brand.">
-        <meta name="keywords"
-            content="voice over, professional voice actors, ad voice, commercial voice overs, voice recording, audio production, Sri Lanka voice overs, ad agency voice talent">
-        <meta name="author" content="BizTone Solutions">
-        <meta property="og:title"
-            content="BizTone Solutions - Professional Voice Overs for Ads">
-        <meta property="og:description"
-            content="High-quality voice over services for advertisements. Browse voice samples and select the best voice for your business.">
-        <style>
-        :root {
-            --light-blue: #c6dbf7;
-            --medium-blue: #4474e0;
-            --very-light-blue: #eff4fb;
-            --dark-blue: #3a5c9e;
-            --almost-white: #f1f6fd;
-            --dark-grayish-blue: #2e3c4c;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+      body {
+        background-color: var(--light-blue);
+        color: var(--dark-grayish-blue);
+        line-height: 1.6;
+      }
 
-        body {
-            background-color: var(--light-blue);
-            color: var(--dark-grayish-blue);
-            line-height: 1.6;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      ::selection {
+        background-color: var(--medium-blue);
+        color: var(--very-light-blue);
+      }
 
-        ::selection {
-            background-color: var(--medium-blue);
-            color: var(--very-light-blue);
-        }
+      /* Header Styles */
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
 
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
 
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--medium-blue);
+        text-decoration: none;
+      }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--medium-blue);
-            text-decoration: none;
-        }
+      .nav-links li {
+        margin-left: 30px;
+      }
 
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark-grayish-blue);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--medium-blue);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding: 180px 0 100px;
+        text-align: center;
+        background-color: var(--almost-white);
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: var(--dark-blue);
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--medium-blue);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .cta-button:hover {
+        background-color: var(--dark-blue);
+        transform: translateY(-3px);
+      }
+
+      /* About Section */
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 36px;
+        color: var(--dark-blue);
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-text h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: var(--dark-blue);
+      }
+
+      .about-image {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Audio Section */
+      .audio-section {
+        background-color: var(--almost-white);
+      }
+
+      .audio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .audio-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .audio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .audio-image {
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .audio-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30%;
+        background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+      }
+
+      .audio-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .audio-card:hover .audio-image img {
+        transform: scale(1.05);
+      }
+
+      .audio-info {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 200px);
+      }
+
+      /* Audio Card Improvements */
+      .badges-container {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .language-badge {
+        background-color: #d8e3fb;
+        color: var(--medium-blue);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .gender-badge-female {
+        background-color: #fde2e4;
+        color: #e75480;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .gender-badge-male {
+        background-color: #dbeafe;
+        color: #3b82f6;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .voice-title-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .voice-title-price h3 {
+        margin: 0;
+        font-size: 18px;
+        color: var(--dark-blue);
+      }
+
+      .price-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .original-price {
+        font-size: 14px;
+        color: #999;
+        text-decoration: line-through;
+        margin-bottom: 2px;
+      }
+
+      .discounted-price {
+        font-size: 16px;
+        font-weight: 700;
+        color: #e63946;
+      }
+
+      .voice-details {
+        margin-bottom: 15px;
+      }
+
+      .detail-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: var(--dark-grayish-blue);
+      }
+
+      .detail-item svg {
+        margin-right: 8px;
+        color: var(--medium-blue);
+      }
+
+      .audio-controls {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 15px;
+      }
+
+      .play-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--medium-blue);
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-right: 15px;
+        transition: background-color 0.3s;
+      }
+
+      .play-button:hover {
+        background-color: var(--dark-blue);
+      }
+
+      .progress-bar {
+        flex: 1;
+        height: 4px;
+        background-color: var(--very-light-blue);
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: var(--medium-blue);
+        transition: width 0.1s linear;
+      }
+
+      .time {
+        font-size: 12px;
+        color: var(--dark-grayish-blue);
+        opacity: 0.7;
+        margin-left: 15px;
+      }
+
+      .select-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: var(--medium-blue);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 14px;
+      }
+
+      .select-button:hover {
+        background-color: var(--dark-blue);
+      }
+
+      /* Contact Section */
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid var(--very-light-blue);
+        border-radius: 5px;
+        background-color: var(--very-light-blue);
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--medium-blue);
+      }
+
+      .form-group textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .submit-button {
+        background-color: var(--medium-blue);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .submit-button:hover {
+        background-color: var(--dark-blue);
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark-grayish-blue);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+
+      .footer-column {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 20px;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .footer-column ul {
+        list-style: none;
+      }
+
+      .footer-column ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul li a {
+        color: var(--light-blue);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-column ul li a:hover {
+        color: white;
+      }
+
+      .copyright {
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
         .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark-grayish-blue);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--medium-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 180px 0 100px;
-            text-align: center;
-            background-color: var(--almost-white);
+          display: none;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--dark-blue);
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--medium-blue);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: var(--dark-blue);
-            transform: translateY(-3px);
-        }
-
-        /* About Section */
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            font-size: 36px;
-            color: var(--dark-blue);
+          font-size: 36px;
         }
 
         .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--dark-blue);
-        }
-
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Audio Section */
-        .audio-section {
-            background-color: var(--almost-white);
+          flex-direction: column;
         }
 
         .audio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
+          grid-template-columns: 1fr;
         }
-
-        .audio-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .audio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .audio-image {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .audio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .audio-card:hover .audio-image img {
-            transform: scale(1.1);
-        }
-
-        .audio-info {
-            padding: 20px;
-        }
-
-        .audio-info h3 {
-            margin-bottom: 10px;
-            color: var(--dark-blue);
-        }
-
-        .audio-controls {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .play-button {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--medium-blue);
-            color: white;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            margin-right: 15px;
-            transition: background-color 0.3s;
-        }
-
-        .play-button:hover {
-            background-color: var(--dark-blue);
-        }
-
-        .progress-bar {
-            flex: 1;
-            height: 4px;
-            background-color: var(--very-light-blue);
-            border-radius: 2px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .progress {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 0%;
-            background-color: var(--medium-blue);
-            transition: width 0.1s linear;
-        }
-
-        .time {
-            font-size: 12px;
-            color: var(--dark-grayish-blue);
-            opacity: 0.7;
-            margin-left: 15px;
-        }
-
-        .select-button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: var(--medium-blue);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .select-button:hover {
-            background-color: var(--dark-blue);
-        }
-
-        /* Contact Section */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--very-light-blue);
-            border-radius: 5px;
-            background-color: var(--very-light-blue);
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--medium-blue);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-button {
-            background-color: var(--medium-blue);
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .submit-button:hover {
-            background-color: var(--dark-blue);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-grayish-blue);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            margin-bottom: 20px;
-        }
-
-        .footer-column h3 {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer-column ul li a {
-            color: var(--light-blue);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-column ul li a:hover {
-            color: white;
-        }
-
-        .copyright {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .about-content {
-                flex-direction: column;
-            }
-
-            .audio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+      }
     </style>
-    </head>
+  </head>
 
-    <body>
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <nav>
-                    <a href="#" class="logo">BizTone Solutions</a>
-                    <ul class="nav-links">
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#audio">Voice Samples</a>
-                        </li>
-                        <!-- <li><a href="#contact">Contact</a></li> -->
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="container">
-                <h1>Professional Voice Overs for Your Ads</h1>
-                <p>
-                    Find the perfect voice for your brand from our talented pool
-                    of voice actors. Listen to samples and select the ideal tone
-                    for your advertising needs.
-                </p>
-                <a href="#audio" class="cta-button">Browse Voice Samples</a>
-            </div>
-        </section>
-        <!-- About Section -->
-        <section class="section" id="about">
-            <div class="container">
-                <h2 class="section-title">About BizTone Solutions</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Your Partner in Effective Advertising</h3>
-                        <p>
-                            BizTone Solutions specializes in providing
-                            high-quality voice over services for advertisements
-                            across various industries. We connect businesses
-                            with professional voice actors to create compelling
-                            audio content that resonates with their target
-                            audience.
-                        </p>
-                        <p>
-                            Our platform makes it easy for you to browse
-                            different voice samples, select the perfect match
-                            for your brand, and get your ad produced quickly and
-                            efficiently.
-                        </p>
-                        <p>
-                            Whether you need a friendly, authoritative,
-                            energetic, or soothing voice, we have the right
-                            talent to bring your message to life.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-                            alt="Recording studio">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Audio Section -->
-        <section class="section audio-section" id="audio">
-            <div class="container">
-                <h2 class="section-title">Voice Samples</h2>
-                <p
-                    style="text-align: center; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    Listen
-                    to our voice samples below. When you find one you like,
-                    click "Select" to send us a WhatsApp message about your
-                    choice.
-                </p>
-                <div class="audio-grid">
-                    <!-- Audio Card 1 -->
-                    <div class="audio-card">
-                        <div class="audio-image">
-                            <img src="img/cover 1.jpg" alt="Voice Actor 1">
-                        </div>
-                        <div class="audio-info">
-                            <h3>Voice 01</h3>
-                            <p>special tv & redio professional
-                                Commercial
-                            </p>
-                            <div class="audio-controls">
-                                <button class="play-button"
-                                    data-audio="audio1">▶</button>
-                                <div class="progress-bar">
-                                    <div class="progress" id="progress1"></div>
-                                </div>
-                                <span class="time" id="time1">0:00</span>
-                            </div>
-                            <button class="select-button"
-                                data-voice="Voice 01">
-                                Select This
-                                Voice
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Audio Card 2 
-                <div class="audio-card">
-                    <div class="audio-image">
-                        <img src="img/cover 2.jpg" alt="Voice Actor 2">
-                    </div>
-                    <div class="audio-info">
-                        <h3>Voice Sample 02</h3>
-                        <p>Warm, Friendly Voice</p>
-                        <div class="audio-controls">
-                            <button class="play-button" data-audio="audio2">▶</button>
-                            <div class="progress-bar">
-                                <div class="progress" id="progress2"></div>
-                            </div>
-                            <span class="time" id="time2">0:00</span>
-                        </div>
-                        <button class="select-button" data-voice="Voice Sample 02">
-                            Select This
-                            Voice
-                        </button>
-                    </div>
-                </div>
-                <!-- Audio Card 3 
-                <div class="audio-card">
-                    <div class="audio-image">
-                        <img src="img/cover 3.jpg" alt="Voice Actor 3">
-                    </div>
-                    <div class="audio-info">
-                        <h3>Voice Sample 03</h3>
-                        <p>Energetic, Youthful Voice</p>
-                        <div class="audio-controls">
-                            <button class="play-button" data-audio="audio3">▶</button>
-                            <div class="progress-bar">
-                                <div class="progress" id="progress3"></div>
-                            </div>
-                            <span class="time" id="time3">0:00</span>
-                        </div>
-                        <button class="select-button" data-voice="Voice Sample 03">
-                            Select This
-                            Voice
-                        </button>
-                    </div>
-                </div>
-                <!-- Audio Card 4 
-                <div class="audio-card">
-                    <div class="audio-image">
-                        <img src="img/cover 4.jpg" alt="Voice Actor 4">
-                    </div>
-                    <div class="audio-info">
-                        <h3>Voice Sample 04</h3>
-                        <p>Professional, Corporate Voice</p>
-                        <div class="audio-controls">
-                            <button class="play-button" data-audio="audio4">▶</button>
-                            <div class="progress-bar">
-                                <div class="progress" id="progress4"></div>
-                            </div>
-                            <span class="time" id="time4">0:00</span>
-                        </div>
-                        <button class="select-button" data-voice="Voice Sample 04">
-                            Select This
-                            Voice
-                        </button>
-                    </div>
-                </div>
-                <!-- Audio Card 5 
-                <div class="audio-card">
-                    <div class="audio-image">
-                        <img src="img/cover 5.jpg" alt="Voice Actor 5">
-                    </div>
-                    <div class="audio-info">
-                        <h3>Voice Sample 05</h3>
-                        <p>Soothing, Calming Voice</p>
-                        <div class="audio-controls">
-                            <button class="play-button" data-audio="audio5">▶</button>
-                            <div class="progress-bar">
-                                <div class="progress" id="progress5"></div>
-                            </div>
-                            <span class="time" id="time5">0:00</span>
-                        </div>
-                        <button class="select-button" data-voice="Voice Sample 05">
-                            Select This
-                            Voice
-                        </button>
-                    </div>
-                </div>
-                <!-- Audio Card 6 
-                <div class="audio-card">
-                    <div class="audio-image">
-                        <img src="img/cover 6.jpg" alt="Voice Actor 6">
-                    </div>
-                    <div class="audio-info">
-                        <h3>Voice Sample 06</h3>
-                        <p>Casual, Conversational Voice</p>
-                        <div class="audio-controls">
-                            <button class="play-button" data-audio="audio6">▶</button>
-                            <div class="progress-bar">
-                                <div class="progress" id="progress6"></div>
-                            </div>
-                            <span class="time" id="time6">0:00</span>
-                        </div>
-                        <button class="select-button" data-voice="Voice Sample 06">
-                            Select This
-                            Voice
-                        </button>
-                    </div>
-                </div>
-                -->
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-            </div>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav>
+          <a href="#" class="logo">BizTone Solutions</a>
+          <ul class="nav-links">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#audio">Voice Samples</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Professional Voice Overs for Your Ads</h1>
+        <p>
+          Find the perfect voice for your brand from our talented pool of voice
+          actors. Listen to samples and select the ideal tone for your
+          advertising needs.
+        </p>
+        <a href="#audio" class="cta-button">Browse Voice Samples</a>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About BizTone Solutions</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Your Partner in Effective Advertising</h3>
+            <p>
+              BizTone Solutions specializes in providing high-quality voice over
+              services for advertisements across various industries. We connect
+              businesses with professional voice actors to create compelling
+              audio content that resonates with their target audience.
+            </p>
+            <p>
+              Our platform makes it easy for you to browse different voice
+              samples, select the perfect match for your brand, and get your ad
+              produced quickly and efficiently.
+            </p>
+            <p>
+              Whether you need a friendly, authoritative, energetic, or soothing
+              voice, we have the right talent to bring your message to life.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Recording studio"
+            />
+          </div>
         </div>
-    </section> -->
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-column">
-                        <h3>BizTone Solutions</h3>
-                        <p>
-                            Professional voice over services for your
-                            advertising
-                            needs.
-                        </p>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li>
-                                <a href="#home">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about">About</a>
-                            </li>
-                            <li>
-                                <a href="#audio">Voice Samples</a>
-                            </li>
-                            <!-- <li><a href="#contact">Contact</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3>Contact Info</h3>
-                        <ul>
-                            <li>info@biztonesolutions.lk</li>
-                            <li>+94 712 654 117</li>
-                            <li>Colombo, Sri Lanka</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="copyright">
-                    <p>&copy; 2025 BizTone Solutions. All rights reserved.</p>
-                </div>
+      </div>
+    </section>
+    <!-- Audio Section -->
+    <section class="section audio-section" id="audio">
+      <div class="container">
+        <h2 class="section-title">Voice Samples</h2>
+        <p
+          style="
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          Listen to our voice samples below. When you find one you like, click
+          "Select" to send us a WhatsApp message about your choice.
+        </p>
+        <div class="audio-grid">
+          <!-- Audio Card 1 -->
+          <div class="audio-card">
+            <div class="audio-image">
+              <img src="img/cover 1.jpg" alt="Voice Actor 1" />
             </div>
-        </footer>
-        <!-- Audio Elements (hidden) -->
-        <audio id="audio1"
-            src="voice/01.mp3"></audio>
-        <audio id="audio2"
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
-        <audio id="audio3"
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
-        <audio id="audio4"
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
-        <audio id="audio5"
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"></audio>
-        <audio id="audio6"
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"></audio>
-        <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Audio Player Functionality
-            const playButtons = document.querySelectorAll('.play-button');
-            let currentlyPlaying = null;
+            <div class="audio-info">
+              <div class="badges-container">
+                <span class="language-badge">Sinhala</span>
+                <span class="gender-badge-female">Female</span>
+              </div>
+              
+              <div class="voice-title-price">
+                <h3>Voice 01</h3>
+                <div class="price-container">
+                  <span class="original-price">Rs. 10,000</span>
+                  <span class="discounted-price">Rs. 3,500</span>
+                </div>
+              </div>
+              
+              <div class="voice-details">
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                  </svg>
+                  <span>Special TV & Radio Commercial</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Maximum Time: 45 Sec</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>Maximum Words: 55</span>
+                </div>
+              </div>
+              
+              <div class="audio-controls">
+                <button class="play-button" data-audio="audio1">▶</button>
+                <div class="progress-bar">
+                  <div class="progress" id="progress1"></div>
+                </div>
+                <span class="time" id="time1">0:00</span>
+              </div>
+              <button class="select-button" data-voice="Voice 01">
+                Select This Voice
+              </button>
+            </div>
+          </div>
 
-            playButtons.forEach(button => {
-                const audioId = button.getAttribute('data-audio');
-                const audio = document.getElementById(audioId);
-                const progressBar = document.getElementById(`progress${audioId.slice(-1)}`);
-                const timeDisplay = document.getElementById(`time${audioId.slice(-1)}`);
+          <!-- Audio Card 2 -->
+          <div class="audio-card">
+            <div class="audio-image">
+              <img src="img/cover 2.jpg" alt="Voice Actor 2" />
+            </div>
+            <div class="audio-info">
+              <div class="badges-container">
+                <span class="language-badge">Sinhala & English</span>
+                <span class="gender-badge-male">Male</span>
+              </div>
+              
+              <div class="voice-title-price">
+                <h3>Voice 02</h3>
+                <div class="price-container">
+                  <span class="original-price">Rs. 12,000</span>
+                  <span class="discounted-price">Rs. 4,500</span>
+                </div>
+              </div>
+              
+              <div class="voice-details">
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                  </svg>
+                  <span>Premium TV Commercial</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Maximum Time: 60 Sec</span>
+                </div>
+                <div class="detail-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>Maximum Words: 75</span>
+                </div>
+              </div>
+              
+              <div class="audio-controls">
+                <button class="play-button" data-audio="audio2">▶</button>
+                <div class="progress-bar">
+                  <div class="progress" id="progress2"></div>
+                </div>
+                <span class="time" id="time2">0:00</span>
+              </div>
+              <button class="select-button" data-voice="Voice 02">
+                Select This Voice
+              </button>
+            </div>
+          </div>
 
-                button.addEventListener('click', function () {
-                    // If this audio is already playing, pause it
-                    if (audio === currentlyPlaying && !audio.paused) {
-                        audio.pause();
-                        button.innerHTML = '▶';
-                        return;
-                    }
+          <!-- Add more audio cards as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>BizTone Solutions</h3>
+            <p>Professional voice over services for your advertising needs.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#audio">Voice Samples</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>info@biztonesolutions.lk</li>
+              <li>+94 712 654 117</li>
+              <li>Colombo, Sri Lanka</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 BizTone Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Audio Elements (hidden) -->
+    <audio id="audio1" src="voice/01.mp3"></audio>
+    <audio id="audio2" src="voice/02.mp3"></audio>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Audio Player Functionality
+        const playButtons = document.querySelectorAll(".play-button");
+        let currentlyPlaying = null;
 
-                    // Pause any currently playing audio
-                    if (currentlyPlaying) {
-                        currentlyPlaying.pause();
-                        const prevButton = document.querySelector(`[data-audio="${currentlyPlaying.id}"]`);
-                        if (prevButton) prevButton.innerHTML = '▶';
-                    }
+        playButtons.forEach((button) => {
+          const audioId = button.getAttribute("data-audio");
+          const audio = document.getElementById(audioId);
+          const progressBar = document.getElementById(
+            `progress${audioId.slice(-1)}`
+          );
+          const timeDisplay = document.getElementById(
+            `time${audioId.slice(-1)}`
+          );
 
-                    // Play this audio
-                    audio.play();
-                    currentlyPlaying = audio;
-                    button.innerHTML = '❚❚';
-                });
-
-                audio.addEventListener('timeupdate', function () {
-                    const progress = (audio.currentTime / audio.duration) * 100;
-                    progressBar.style.width = `${progress}%`;
-
-                    // Update time display
-                    const minutes = Math.floor(audio.currentTime / 60);
-                    const seconds = Math.floor(audio.currentTime % 60);
-                    timeDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-                });
-
-                audio.addEventListener('ended', function () {
-                    button.innerHTML = '▶';
-                    progressBar.style.width = '0%';
-                    timeDisplay.textContent = '0:00';
-                });
-            });
-
-            // Select Button Functionality
-            const selectButtons = document.querySelectorAll('.select-button');
-            selectButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const voice = button.getAttribute('data-voice');
-                    const whatsappNumber = '+94712654117';
-                    const message = `I would like to choose this voice for my ad: ${voice}. Please contact me to proceed.`;
-                    const encodedMessage = encodeURIComponent(message);
-                    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
-                });
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! We will get back to you soon.');
-                    this.reset();
-                });
+          button.addEventListener("click", function () {
+            // If this audio is already playing, pause it
+            if (audio === currentlyPlaying && !audio.paused) {
+              audio.pause();
+              button.innerHTML = "▶";
+              return;
             }
-        });
-    </script>
-    </body>
 
+            // Pause any currently playing audio
+            if (currentlyPlaying) {
+              currentlyPlaying.pause();
+              const prevButton = document.querySelector(
+                `[data-audio="${currentlyPlaying.id}"]`
+              );
+              if (prevButton) prevButton.innerHTML = "▶";
+            }
+
+            // Play this audio
+            audio.play();
+            currentlyPlaying = audio;
+            button.innerHTML = "❚❚";
+          });
+
+          audio.addEventListener("timeupdate", function () {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+
+            // Update time display
+            const minutes = Math.floor(audio.currentTime / 60);
+            const seconds = Math.floor(audio.currentTime % 60);
+            timeDisplay.textContent = `${minutes}:${
+              seconds < 10 ? "0" : ""
+            }${seconds}`;
+          });
+
+          audio.addEventListener("ended", function () {
+            button.innerHTML = "▶";
+            progressBar.style.width = "0%";
+            timeDisplay.textContent = "0:00";
+          });
+        });
+
+        // Select Button Functionality
+        const selectButtons = document.querySelectorAll(".select-button");
+        selectButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const voice = button.getAttribute("data-voice");
+            const whatsappNumber = "+94712654117";
+            const message = `I would like to choose this voice for my ad: ${voice}. Please contact me to proceed.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(
+              `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
+              "_blank"
+            );
+          });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you for your message! We will get back to you soon.");
+            this.reset();
+          });
+        }
+      });
+    </script>
+  </body>
 </html>

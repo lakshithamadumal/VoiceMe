@@ -214,13 +214,13 @@
       }
 
       .audio-image::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         height: 30%;
-        background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
       }
 
       .audio-image img {
@@ -507,6 +507,16 @@
         color: rgba(255, 255, 255, 0.7);
       }
 
+      .copyright .dev-name {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .copyright .dev-name:hover {
+        color: var(--medium-blue);
+      }
+
       /* Responsive Styles */
       @media (max-width: 768px) {
         .nav-links {
@@ -619,7 +629,7 @@
                 <span class="language-badge">Sinhala only</span>
                 <span class="gender-badge-female">Female</span>
               </div>
-              
+
               <div class="voice-title-price">
                 <h3>Voice 01</h3>
                 <div class="price-container">
@@ -627,32 +637,63 @@
                   <span class="discounted-price">Rs. 3,500</span>
                 </div>
               </div>
-              
+
               <div class="voice-details">
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+                    ></path>
                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                     <line x1="12" y1="19" x2="12" y2="22"></line>
                   </svg>
                   <span>Special TV & Radio Commercial</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
                   <span>Maximum Time: 45 Sec</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
                   </svg>
                   <span>Maximum Words: 55</span>
                 </div>
               </div>
-              
+
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio1">▶</button>
                 <div class="progress-bar">
@@ -676,7 +717,7 @@
                 <span class="language-badge">English only</span>
                 <span class="gender-badge-female">Female</span>
               </div>
-              
+
               <div class="voice-title-price">
                 <h3>Voice 02</h3>
                 <div class="price-container">
@@ -684,32 +725,63 @@
                   <span class="discounted-price">Rs. 10,000</span>
                 </div>
               </div>
-              
+
               <div class="voice-details">
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+                    ></path>
                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                     <line x1="12" y1="19" x2="12" y2="22"></line>
                   </svg>
                   <span>Premium TV Commercial</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
                   <span>Maximum Time: 45 Sec</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
                   </svg>
                   <span>Maximum Words: 55</span>
                 </div>
               </div>
-              
+
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio2">▶</button>
                 <div class="progress-bar">
@@ -733,7 +805,7 @@
                 <span class="language-badge">English & Sinhala only</span>
                 <span class="gender-badge-male">Male</span>
               </div>
-              
+
               <div class="voice-title-price">
                 <h3>Voice 03</h3>
                 <div class="price-container">
@@ -741,32 +813,63 @@
                   <span class="discounted-price">Rs. 15,000</span>
                 </div>
               </div>
-              
+
               <div class="voice-details">
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+                    ></path>
                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                     <line x1="12" y1="19" x2="12" y2="22"></line>
                   </svg>
                   <span>Premium TV Commercial</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
                   <span>Maximum Time: 45 Sec</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
                   </svg>
                   <span>Maximum Words: 55</span>
                 </div>
               </div>
-              
+
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio3">▶</button>
                 <div class="progress-bar">
@@ -790,7 +893,7 @@
                 <span class="language-badge">English & Sinhala only</span>
                 <span class="gender-badge-male">Male</span>
               </div>
-              
+
               <div class="voice-title-price">
                 <h3>Voice 04</h3>
                 <div class="price-container">
@@ -798,32 +901,63 @@
                   <span class="discounted-price">Rs. 22,000</span>
                 </div>
               </div>
-              
+
               <div class="voice-details">
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"
+                    ></path>
                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
                     <line x1="12" y1="19" x2="12" y2="22"></line>
                   </svg>
                   <span>Premium TV Commercial</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <circle cx="12" cy="12" r="10"></circle>
                     <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
                   <span>Maximum Time: 45 Sec</span>
                 </div>
                 <div class="detail-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
                   </svg>
                   <span>Maximum Words: 55</span>
                 </div>
               </div>
-              
+
               <div class="audio-controls">
                 <button class="play-button" data-audio="audio4">▶</button>
                 <div class="progress-bar">
@@ -874,6 +1008,15 @@
         </div>
         <div class="copyright">
           <p>&copy; 2025 BizTone Solutions. All rights reserved.</p>
+          <p>
+            Developed by
+            <a
+              href="https://www.instagram.com/laky.xyz/"
+              target="_blank"
+              class="dev-name"
+              >Laky</a
+            >
+          </p>
         </div>
       </div>
     </footer>
@@ -882,7 +1025,7 @@
     <audio id="audio2" src="voice/02.mp3"></audio>
     <audio id="audio3" src="voice/03.mp3"></audio>
     <audio id="audio4" src="voice/04.mp3"></audio>
-    
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Audio Player Functionality

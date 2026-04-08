@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Voice Me - Professional Voice Overs for Ads</title>
+    <title>Voice Me - Professional Voice Over Services in Sri Lanka</title>
     <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome for hamburger icon -->
@@ -17,42 +17,52 @@
     <!-- Meta Tag-->
     <meta
       name="description"
-      content="Voice Me offers professional voice overs for ads and commercials. Choose from a wide range of voice samples and find the perfect voice for your brand."
+      content="Voice Me - Professional voice over services for commercials, AI content, mobile ads, corporate videos, educational content, and live event hosting. Book premium voice artists in Sri Lanka."
     />
     <meta
       name="keywords"
-      content="voice over, professional voice actors, ad voice, commercial voice overs, voice recording, audio production, Sri Lanka voice overs, ad agency voice talent"
+      content="voice over, professional voice actors, commercials, AI voice, tuition videos, corporate videos, event announcer, Sri Lanka voice services, voice artist, narration"
     />
     <meta name="author" content="Voice Me" />
     <meta
       property="og:title"
-      content="Voice Me - Professional Voice Overs for Ads"
+      content="Voice Me - Professional Voice Over Services"
     />
     <meta
       property="og:description"
-      content="High-quality voice over services for advertisements. Browse voice samples and select the best voice for your business."
+      content="Premium voice over services for every need - commercials, corporate videos, AI content, educational materials, and live event hosting. Professional voice artists ready to bring your message to life."
     />
     <style>
       :root {
-        --light-blue: #c6dbf7;
-        --medium-blue: #4474e0;
-        --very-light-blue: #eff4fb;
-        --dark-blue: #3a5c9e;
-        --almost-white: #f1f6fd;
-        --dark-grayish-blue: #2e3c4c;
+        --strawberry-red: #e63946;
+        --honeydew: #f1faee;
+        --frosted-blue: #a8dadc;
+        --steel-blue: #457b9d;
+        --deep-space-blue: #1d3557;
       }
 
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Inter", sans-serif;
+        font-family: "Poppins", "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       body {
-        background-color: var(--light-blue);
-        color: var(--dark-grayish-blue);
+        background: linear-gradient(165deg, var(--honeydew) 0%, #ddf5f7 50%, #e8f4f9 100%);
+        color: var(--deep-space-blue);
         line-height: 1.6;
+        min-height: 100vh;
+        animation: fadeInBody 0.6s ease-out;
+      }
+
+      @keyframes fadeInBody {
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
 
       .container {
@@ -62,18 +72,33 @@
       }
 
       ::selection {
-        background-color: var(--medium-blue);
-        color: var(--very-light-blue);
+        background-color: var(--strawberry-red);
+        color: var(--honeydew);
       }
 
       /* Header Styles */
       header {
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: rgba(241, 250, 238, 0.88);
+        box-shadow: 0 8px 32px rgba(29, 53, 87, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(168, 218, 220, 0.3);
         position: fixed;
         width: 100%;
         top: 0;
         z-index: 1000;
+        animation: slideDown 0.5s ease-out;
+      }
+
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
 
       nav {
@@ -84,10 +109,16 @@
       }
 
       .logo {
-        font-size: 24px;
-        font-weight: 700;
-        color: var(--medium-blue);
+        display: inline-flex;
+        align-items: center;
+        line-height: 1;
         text-decoration: none;
+      }
+
+      .logo img {
+        height: 42px;
+        width: auto;
+        display: block;
       }
 
       .nav-links {
@@ -101,13 +132,30 @@
 
       .nav-links a {
         text-decoration: none;
-        color: var(--dark-grayish-blue);
+        color: var(--deep-space-blue);
         font-weight: 500;
-        transition: color 0.3s;
+        position: relative;
+        transition: color 0.3s ease;
+        padding: 8px 0;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--strawberry-red);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
       }
 
       .nav-links a:hover {
-        color: var(--medium-blue);
+        color: var(--strawberry-red);
       }
 
       /* Mobile Menu Button */
@@ -115,7 +163,7 @@
         display: none;
         background: none;
         border: none;
-        color: var(--dark-grayish-blue);
+        color: var(--deep-space-blue);
         font-size: 24px;
         cursor: pointer;
         padding: 5px;
@@ -128,13 +176,16 @@
         top: 70px;
         left: 0;
         right: 0;
-        background-color: white;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        background: rgba(241, 250, 238, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(29, 53, 87, 0.12);
         z-index: 999;
         padding: 20px;
         transform: translateY(-150%);
         opacity: 0;
-        transition: all 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom: 1px solid rgba(168, 218, 220, 0.3);
       }
 
       .mobile-menu.active {
@@ -152,65 +203,125 @@
 
       .mobile-menu ul li a {
         text-decoration: none;
-        color: var(--dark-grayish-blue);
+        color: var(--deep-space-blue);
         font-weight: 500;
         font-size: 18px;
         display: block;
         padding: 10px;
-        transition: all 0.3s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 8px;
       }
 
       .mobile-menu ul li a:hover {
-        color: var(--medium-blue);
-        background-color: var(--very-light-blue);
-        border-radius: 5px;
+        color: var(--strawberry-red);
+        background-color: rgba(230, 57, 70, 0.08);
       }
 
       /* Hero Section */
       .hero {
         padding: 180px 0 100px;
         text-align: center;
-        background-color: var(--almost-white);
+        background:
+          radial-gradient(circle at top right, rgba(230, 57, 70, 0.12), transparent 50%),
+          linear-gradient(180deg, var(--honeydew), #ecf7f8);
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 54px;
         margin-bottom: 20px;
-        color: var(--dark-blue);
+        color: var(--deep-space-blue);
+        font-weight: 800;
+        letter-spacing: -1px;
+        animation: fadeInUp 0.8s ease-out 0.1s both;
       }
 
       .hero p {
         font-size: 18px;
         max-width: 700px;
         margin: 0 auto 40px;
+        font-weight: 300;
+        color: var(--steel-blue);
+        animation: fadeInUp 0.8s ease-out 0.2s both;
       }
 
       .cta-button {
         display: inline-block;
-        background-color: var(--medium-blue);
+        background: linear-gradient(135deg, var(--strawberry-red), #d62828);
         color: white;
-        padding: 12px 30px;
-        border-radius: 30px;
+        padding: 14px 36px;
+        border-radius: 50px;
         text-decoration: none;
         font-weight: 600;
-        transition: background-color 0.3s, transform 0.3s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 28px rgba(230, 57, 70, 0.25);
+        border: none;
+        cursor: pointer;
+        animation: fadeInUp 0.8s ease-out 0.3s both;
       }
 
       .cta-button:hover {
-        background-color: var(--dark-blue);
-        transform: translateY(-3px);
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(230, 57, 70, 0.35);
+      }
+
+      .cta-button:active {
+        transform: translateY(-2px);
       }
 
       /* About Section */
       .section {
         padding: 100px 0;
+        opacity: 0;
+        animation: fadeInSection 0.8s ease-out forwards;
+      }
+
+      .section:nth-of-type(3) { animation-delay: 0.1s; }
+      .section:nth-of-type(4) { animation-delay: 0.2s; }
+
+      @keyframes fadeInSection {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .section-title {
         text-align: center;
         margin-bottom: 60px;
-        font-size: 36px;
-        color: var(--dark-blue);
+        font-size: 40px;
+        color: var(--deep-space-blue);
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--strawberry-red), var(--frosted-blue));
+        border-radius: 2px;
       }
 
       .about-content {
@@ -224,16 +335,31 @@
       }
 
       .about-text h3 {
-        font-size: 24px;
+        font-size: 28px;
         margin-bottom: 20px;
-        color: var(--dark-blue);
+        color: var(--steel-blue);
+        font-weight: 700;
+      }
+
+      .about-text p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--steel-blue);
+        margin-bottom: 15px;
+        font-weight: 300;
       }
 
       .about-image {
         flex: 1;
-        border-radius: 10px;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 60px rgba(29, 53, 87, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .about-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 28px 80px rgba(29, 53, 87, 0.22);
       }
 
       .about-image img {
@@ -242,9 +368,64 @@
         display: block;
       }
 
+      /* Services Section */
+      .services-section {
+        background: linear-gradient(135deg, #eef8f8 0%, var(--honeydew) 100%);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 28px;
+        margin-top: 40px;
+      }
+
+      .service-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(168, 218, 220, 0.3);
+        border-radius: 14px;
+        padding: 32px 24px;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.95);
+        border-color: rgba(168, 218, 220, 0.6);
+        box-shadow: 0 12px 40px rgba(29, 53, 87, 0.12);
+      }
+
+      .service-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: scale(1.15) rotate(-5deg);
+      }
+
+      .service-card h3 {
+        font-size: 20px;
+        color: var(--deep-space-blue);
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: var(--steel-blue);
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
       /* Audio Section */
       .audio-section {
-        background-color: var(--almost-white);
+        background-color: #eef8f8;
       }
 
       .audio-grid {
@@ -254,18 +435,23 @@
       }
 
       .audio-card {
-        background-color: white;
-        border-radius: 10px;
+        background: rgba(241, 250, 238, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(168, 218, 220, 0.4);
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
+        box-shadow: 0 8px 32px rgba(29, 53, 87, 0.08);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         flex-direction: column;
       }
 
       .audio-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transform: translateY(-8px);
+        box-shadow: 0 16px 48px rgba(29, 53, 87, 0.15);
+        background: rgba(255, 255, 255, 0.8);
+        border-color: rgba(168, 218, 220, 0.6);
       }
 
       .audio-image {
@@ -288,11 +474,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .audio-card:hover .audio-image img {
-        transform: scale(1.05);
+        transform: scale(1.08);
       }
 
       .audio-info {
@@ -310,36 +496,57 @@
       }
 
       .language-badge {
-        background-color: #d8e3fb;
-        color: var(--medium-blue);
-        padding: 4px 10px;
-        border-radius: 6px;
+        background-color: rgba(69, 123, 157, 0.15);
+        color: var(--steel-blue);
+        padding: 5px 12px;
+        border-radius: 20px;
         font-size: 12px;
         font-weight: 600;
         display: inline-flex;
         align-items: center;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(69, 123, 157, 0.25);
+      }
+
+      .language-badge:hover {
+        background-color: rgba(69, 123, 157, 0.25);
+        border-color: rgba(69, 123, 157, 0.4);
       }
 
       .gender-badge-female {
-        background-color: #fde2e4;
-        color: #e75480;
-        padding: 4px 10px;
-        border-radius: 6px;
+        background-color: rgba(230, 57, 70, 0.14);
+        color: var(--strawberry-red);
+        padding: 5px 12px;
+        border-radius: 20px;
         font-size: 12px;
         font-weight: 600;
         display: inline-flex;
         align-items: center;
+        border: 1px solid rgba(230, 57, 70, 0.25);
+        transition: all 0.3s ease;
+      }
+
+      .gender-badge-female:hover {
+        background-color: rgba(230, 57, 70, 0.24);
+        border-color: rgba(230, 57, 70, 0.4);
       }
 
       .gender-badge-male {
-        background-color: #dbeafe;
-        color: #3b82f6;
-        padding: 4px 10px;
-        border-radius: 6px;
+        background-color: rgba(29, 53, 87, 0.14);
+        color: var(--deep-space-blue);
+        padding: 5px 12px;
+        border-radius: 20px;
         font-size: 12px;
         font-weight: 600;
         display: inline-flex;
         align-items: center;
+        border: 1px solid rgba(29, 53, 87, 0.25);
+        transition: all 0.3s ease;
+      }
+
+      .gender-badge-male:hover {
+        background-color: rgba(29, 53, 87, 0.24);
+        border-color: rgba(29, 53, 87, 0.4);
       }
 
       .voice-title-price {
@@ -352,7 +559,7 @@
       .voice-title-price h3 {
         margin: 0;
         font-size: 18px;
-        color: var(--dark-blue);
+        color: var(--deep-space-blue);
       }
 
       .price-container {
@@ -371,7 +578,7 @@
       .discounted-price {
         font-size: 16px;
         font-weight: 700;
-        color: #df040a;
+        color: var(--strawberry-red);
       }
 
       .voice-details {
@@ -383,12 +590,12 @@
         align-items: center;
         margin-bottom: 8px;
         font-size: 14px;
-        color: var(--dark-grayish-blue);
+        color: var(--deep-space-blue);
       }
 
       .detail-item svg {
         margin-right: 8px;
-        color: var(--medium-blue);
+        color: var(--steel-blue);
       }
 
       .audio-controls {
@@ -399,10 +606,10 @@
       }
 
       .play-button {
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
-        background-color: var(--medium-blue);
+        background: linear-gradient(135deg, var(--steel-blue), var(--deep-space-blue));
         color: white;
         border: none;
         display: flex;
@@ -410,21 +617,33 @@
         justify-content: center;
         cursor: pointer;
         margin-right: 15px;
-        transition: background-color 0.3s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 6px 20px rgba(69, 123, 157, 0.25);
+        font-size: 16px;
       }
 
       .play-button:hover {
-        background-color: var(--dark-blue);
+        transform: scale(1.1);
+        box-shadow: 0 10px 28px rgba(69, 123, 157, 0.35);
+      }
+
+      .play-button:active {
+        transform: scale(0.95);
       }
 
       .progress-bar {
         flex: 1;
-        height: 4px;
-        background-color: var(--very-light-blue);
-        border-radius: 2px;
+        height: 5px;
+        background-color: rgba(69, 123, 157, 0.15);
+        border-radius: 3px;
         position: relative;
         overflow: hidden;
         cursor: pointer;
+        transition: height 0.3s ease;
+      }
+
+      .progress-bar:hover {
+        height: 6px;
       }
 
       .progress {
@@ -433,13 +652,14 @@
         left: 0;
         height: 100%;
         width: 0%;
-        background-color: var(--medium-blue);
+        background: linear-gradient(90deg, var(--strawberry-red), #ff5a5f);
         transition: width 0.1s linear;
+        border-radius: 3px;
       }
 
       .time {
         font-size: 12px;
-        color: var(--dark-grayish-blue);
+        color: var(--deep-space-blue);
         opacity: 0.7;
         margin-left: 15px;
       }
@@ -448,26 +668,44 @@
         display: block;
         width: 100%;
         padding: 12px;
-        background-color: var(--medium-blue);
+        background: linear-gradient(135deg, var(--strawberry-red), #d62828);
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         font-weight: 600;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         font-size: 14px;
+        box-shadow: 0 6px 20px rgba(230, 57, 70, 0.2);
       }
 
       .select-button:hover {
-        background-color: var(--dark-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(230, 57, 70, 0.3);
+      }
+
+      .select-button:active {
+        transform: translateY(0);
       }
 
       /* Footer */
       footer {
-        background-color: var(--dark-grayish-blue);
+        background: linear-gradient(135deg, var(--deep-space-blue), #0f1f32);
         color: white;
-        padding: 40px 0;
+        padding: 60px 0 30px;
         text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(168, 218, 220, 0.4), transparent);
       }
 
       .footer-content {
@@ -486,6 +724,8 @@
       .footer-column h3 {
         margin-bottom: 20px;
         font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
       }
 
       .footer-column ul {
@@ -497,9 +737,26 @@
       }
 
       .footer-column ul li a {
-        color: var(--light-blue);
+        color: var(--frosted-blue);
         text-decoration: none;
-        transition: color 0.3s;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+      }
+
+      .footer-column ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--frosted-blue);
+        transition: width 0.3s ease;
+      }
+
+      .footer-column ul li a:hover::after {
+        width: 100%;
       }
 
       .footer-column ul li a:hover {
@@ -518,7 +775,7 @@
         color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
         transition: color 0.3s ease;
-        color: var(--light-blue);
+        color: var(--frosted-blue);
       }
 
       /* Responsive Styles */
@@ -529,26 +786,36 @@
 
         .mobile-menu-btn {
           display: block;
+          transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:active {
+          transform: scale(0.9);
         }
 
         .mobile-menu {
           display: block;
         }
 
-        .logo {
-          font-size: 20px;
+        .logo img {
+          max-width: 150px;
         }
 
-        .logo .long-name {
-          display: none;
-        }
-
-        .logo .short-name {
-          display: inline;
+        .logo img {
+          height: 34px;
         }
 
         .hero h1 {
-          font-size: 36px;
+          font-size: 40px;
+          margin-bottom: 16px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        .section-title {
+          font-size: 32px;
         }
 
         .about-content {
@@ -558,11 +825,9 @@
         .audio-grid {
           grid-template-columns: 1fr;
         }
-      }
 
-      @media (min-width: 769px) {
-        .logo .short-name {
-          display: none;
+        .section {
+          padding: 60px 0;
         }
       }
     </style>
@@ -574,12 +839,12 @@
       <div class="container">
         <nav>
           <a href="#" class="logo">
-            <span class="long-name">Voice Me</span>
-            <span class="short-name">Voice Me</span>
+            <img src="img/logo.svg" alt="Voice Me logo" />
           </a>
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#audio">Voice Samples</a></li>
           </ul>
           <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -594,17 +859,16 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#audio">Voice Samples</a></li>
       </ul>
     </div>
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
-        <h1>Professional Voice Overs for Your Ads</h1>
+        <h1>Every Need Deserves the Perfect Voice</h1>
         <p>
-          Find the perfect voice for your brand from our talented pool of voice
-          actors. Listen to samples and select the ideal tone for your
-          advertising needs.
+          Professional voice over services to bring your message to life. Whether it's TV commercials, corporate videos, AI content, educational materials, or live event hosting - we have the perfect voice for you.
         </p>
         <a href="#audio" class="cta-button">Browse Voice Samples</a>
       </div>
@@ -612,39 +876,73 @@
     <!-- About Section -->
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">About Voice Me</h2>
+        <h2 class="section-title">Why Choose Voice Me?</h2>
         <div class="about-content">
           <div class="about-text">
-            <h3>Your Partner in Effective Advertising</h3>
+            <h3>Your Trusted Voice Partner</h3>
             <p>
-              Voice Me specializes in providing high-quality voice over
-              services for advertisements across various industries. We connect
-              businesses with professional voice actors to create compelling
-              audio content that resonates with their target audience.
+              Voice Me brings professional, high-quality voice over solutions to businesses, content creators, and event organizers across Sri Lanka. With experienced broadcasters and voice artists, we deliver the perfect voice for every project.
             </p>
             <p>
-              Our platform makes it easy for you to browse different voice
-              samples, select the perfect match for your brand, and get your ad
-              produced quickly and efficiently.
+              From TV and radio commercials to corporate videos, educational content, and live event hosting, we provide comprehensive voice solutions with state-of-the-art recording facilities.
             </p>
             <p>
-              Whether you need a friendly, authoritative, energetic, or soothing
-              voice, we have the right talent to bring your message to life.
+              Our commitment is simple: deliver premium quality voices at fair prices. Choose from multiple languages including Sinhala, Tamil, and English, customized perfectly for your unique needs.
             </p>
           </div>
           <div class="about-image">
             <img
               src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
-              alt="Recording studio"
+              alt="Professional recording studio"
             />
           </div>
         </div>
       </div>
     </section>
-    <!-- Audio Section -->
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p style="text-align: center; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto; font-size: 16px;">
+          Voice Me specializes in professional voice over solutions across multiple industries. Whatever your project, we have the expertise and talent to deliver.
+        </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">📺</div>
+            <h3>TV & Radio Commercials</h3>
+            <p>Professional voice work for television, radio, and digital advertisements. Premium quality broadcasts that captivate and sell.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🤖</div>
+            <h3>AI & Technology Content</h3>
+            <p>Natural-sounding narration for AI videos and digital content. Perfect for tech companies and modern platforms.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📢</div>
+            <h3>Mobile & Local Ads</h3>
+            <p>Engaging announcements for retail openings, local promotions, and community events with attractive voice work.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Corporate Solutions</h3>
+            <p>Professional voice work for business ringtones, corporate videos, presentations, and internal communications.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">📚</div>
+            <h3>Educational Content</h3>
+            <p>Clear and engaging narration for tuition videos, online courses, and educational materials for students.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🎤</div>
+            <h3>Event Hosting & Announcements</h3>
+            <p>Professional announcers for sports events, musical shows, award ceremonies, and celebrations. Expert voice talent for any occasion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section audio-section" id="audio">
       <div class="container">
-        <h2 class="section-title">Voice Samples</h2>
+        <h2 class="section-title">Select Your Perfect Voice</h2>
         <p
           style="
             text-align: center;
@@ -654,8 +952,7 @@
             margin-right: auto;
           "
         >
-          Listen to our voice samples below. When you find one you like, click
-          "Select" to send us a WhatsApp message about your choice.
+          Explore our talented voice artists below. Listen to their samples and choose the perfect voice for your project. Contact us via WhatsApp to discuss pricing and book your voice artist.
         </p>
         <div class="audio-grid">
           <!-- Audio Card 1 -->
@@ -1031,7 +1328,7 @@
         <div class="footer-content">
           <div class="footer-column">
             <h3>Voice Me</h3>
-            <p>Professional voice over services for your advertising needs.</p>
+            <p>Professional voice over solutions for every need - commercials, corporate videos, education, and events.</p>
           </div>
           <div class="footer-column">
             <h3>Quick Links</h3>
@@ -1043,6 +1340,9 @@
                 <a href="#about">About</a>
               </li>
               <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
                 <a href="#audio">Voice Samples</a>
               </li>
             </ul>
@@ -1051,7 +1351,7 @@
             <h3>Contact Info</h3>
             <ul>
               <li>info@biztonesolutions.lk</li>
-              <li>+94 70 630 0029</li>
+              <li>0718231231</li>
               <li>Colombo, Sri Lanka</li>
             </ul>
           </div>
@@ -1194,7 +1494,7 @@
         selectButtons.forEach((button) => {
           button.addEventListener("click", function () {
             const voice = button.getAttribute("data-voice");
-            const whatsappNumber = "+94706300029";
+            const whatsappNumber = "94718231231";
             const message = `I would like to choose this voice for my ad: ${voice}. Please contact me to proceed.`;
             const encodedMessage = encodeURIComponent(message);
             window.open(

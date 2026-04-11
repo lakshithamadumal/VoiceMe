@@ -1,0 +1,12 @@
+::selection {
+	background: #ff4b3e;
+	background-image: linear-gradient(90deg, #ff2d7a 0%, #ff4b3e 52%, #ff6a1a 100%);
+	color: #ffffff;
+	-webkit-text-fill-color: #ffffff;
+}
+
+::-moz-selection {
+	background: #ff4b3e;
+	background-image: linear-gradient(90deg, #ff2d7a 0%, #ff4b3e 52%, #ff6a1a 100%);
+	color: #ffffff;
+}

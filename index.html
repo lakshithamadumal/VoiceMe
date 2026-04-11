@@ -47,17 +47,65 @@
         <link rel="shortcut icon" href="/fav.png"/>
         <link rel="icon" href="/fav.png"/>
         <link rel="apple-touch-icon" href="/fav.png"/>
-        <script>
-            (function () {
-                var params = new URLSearchParams(window.location.search);
-                if (params.get('from') !== 'loading') {
-                    window.location.replace('loading.html');
+        <style>
+            .vm-splash {
+                position: fixed;
+                inset: 0;
+                z-index: 99999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #ffffff;
+                transition: opacity 280ms ease, visibility 280ms ease;
+            }
+
+            .vm-splash.is-hidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            .vm-wave {
+                display: flex;
+                align-items: flex-end;
+                gap: 16px;
+            }
+
+            .vm-wave-bar {
+                width: 22px;
+                border-radius: 999px;
+                background: linear-gradient(180deg, #ff6a1a 0%, #ff4b3e 48%, #ff2d7a 100%);
+                transform-origin: center bottom;
+                animation: vmWavePulse 1s ease-in-out infinite;
+            }
+
+            .vm-wave-bar:nth-child(1) { height: 54px; animation-delay: 0s; }
+            .vm-wave-bar:nth-child(2) { height: 92px; animation-delay: 0.14s; }
+            .vm-wave-bar:nth-child(3) { height: 68px; animation-delay: 0.28s; }
+            .vm-wave-bar:nth-child(4) { height: 42px; animation-delay: 0.42s; }
+
+            @keyframes vmWavePulse {
+                0%, 100% {
+                    transform: scaleY(0.72);
+                    opacity: 0.52;
                 }
-            })();
-        </script>
+                50% {
+                    transform: scaleY(1.16);
+                    opacity: 1;
+                }
+            }
+        </style>
         <script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script>
     </head>
     <body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased">
+        <div class="vm-splash" id="vm-splash" aria-label="Loading Voice Me" aria-busy="true">
+            <div class="vm-wave" aria-hidden="true">
+                <div class="vm-wave-bar"></div>
+                <div class="vm-wave-bar"></div>
+                <div class="vm-wave-bar"></div>
+                <div class="vm-wave-bar"></div>
+            </div>
+        </div>
         <div hidden="">
         <!--$-->
         <!--/$-->
@@ -110,6 +158,26 @@
         </script>
         <script>
             self.__next_f.push([1, "1f:I[230847,[\"/_next/static/chunks/6aa9536fbcc0af46.js\",\"/_next/static/chunks/f2f34c53ac784a39.js\"],\"IconMark\"]\n1d:[[\"$\",\"title\",\"0\",{\"children\":\"Voice Me - Professional Voice Over Services in Sri Lanka\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Voice Me provides Sinhala and multilingual voice over services for commercials, AI videos, business branding, events, and educational content.\"}],[\"$\",\"meta\",\"2\",{\"name\":\"keywords\",\"content\":\"Voice over Sri Lanka, Sinhala voice over, TV radio commercial voice, announcers hire, Voice Me\"}],[\"$\",\"link\",\"3\",{\"rel\":\"shortcut icon\",\"href\":\"/fav.png\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/fav.png\"}],[\"$\",\"link\",\"5\",{\"rel\":\"apple-touch-icon\",\"href\":\"/fav.png\"}],[\"$\",\"$L1f\",\"6\",{}]]\n19:null\n"])
+        </script>
+        <script>
+            (function () {
+                var splash = document.getElementById('vm-splash');
+                if (!splash) return;
+
+                function hideSplash() {
+                    splash.classList.add('is-hidden');
+                    window.setTimeout(function () {
+                        if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+                    }, 320);
+                }
+
+                if (document.readyState === 'complete') {
+                    hideSplash();
+                    return;
+                }
+
+                window.addEventListener('load', hideSplash, { once: true });
+            })();
         </script>
     </body>
 </html>

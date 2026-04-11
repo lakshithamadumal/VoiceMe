@@ -94,6 +94,21 @@
                     opacity: 1;
                 }
             }
+
+            @media (min-width: 1024px) {
+                html,
+                body {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+
+                html::-webkit-scrollbar,
+                body::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                    display: none;
+                }
+            }
         </style>
         <script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script>
     </head>

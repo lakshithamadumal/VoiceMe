@@ -47,6 +47,14 @@
         <link rel="shortcut icon" href="/fav.png"/>
         <link rel="icon" href="/fav.png"/>
         <link rel="apple-touch-icon" href="/fav.png"/>
+        <script>
+            (function () {
+                var params = new URLSearchParams(window.location.search);
+                if (params.get('from') !== 'loading') {
+                    window.location.replace('loading.html');
+                }
+            })();
+        </script>
         <script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script>
     </head>
     <body class="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased">
